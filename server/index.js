@@ -19,11 +19,11 @@ router.all('/:id/images*', (req, res) => {
 });
 
 router.all('/:id/reviews*', (req, res) => {
-  res.redirect(307, `http://localhost:3002${req.url}`);
+  res.redirect(307, `http://localhost:8080${req.url}`);
 });
 
 router.all('/:id/restaurantInfo*', (req, res) => {
-  res.redirect(307, `http://localhost:8080${req.url}`);
+  res.redirect(307, `http://localhost:3002${req.url}`);
 });
 
 server.listen(port, () => {
