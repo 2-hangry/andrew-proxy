@@ -1,0 +1,89 @@
+#zelpWrapper {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'nav nav nav nav nav'
+    'title title title title title'
+    '. map photos photos .'
+    '. prev prev reservation .'
+    '. ask ask ad .'
+    '. review review info .';
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.nav img {
+  width: 100%;
+  height: 100px;
+}
+
+.title {
+  grid-area: title;
+}
+
+.title img {
+  width: 100%;
+  height: 140px;
+}
+
+.map {
+  grid-area: map;
+}
+
+.map img {
+  width: 100%;
+  height: 355;
+}
+
+.prev {
+  grid-area: prev;
+}
+
+.prev img {
+  width: 100%;
+  height: 350px;
+}
+
+.reserve {
+  grid-area: reservation;
+}
+
+.reserve img {
+  width: 100%;
+  height: 350px;
+}
+
+.ask {
+  grid-area: ask;
+}
+
+.ask img {
+  width: 100%;
+  height: 300;
+}
+
+.ad {
+  grid-area: ad;
+}
+
+.ad img {
+  width: 100%;
+  height: 300;
+}
+
+#root {
+  grid-area: photos;
+  height: 350px;
+  align-self: center;
+}
+
+#app {
+  grid-area: review;
+}
+
+#restaurantInfoApp {
+  grid-area: info;
+}

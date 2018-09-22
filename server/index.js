@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 
-const port = process.env.PORT || 3030;
+const port = process.env.PORT;
 
 const server = express();
 const router = express.Router();
@@ -15,7 +15,7 @@ server.use(
 server.use('/api/businesses', router);
 
 router.all('/:id/images*', (req, res) => {
-  res.redirect(307, `http://localhost:3000${req.url}`);
+  res.redirect(307, `http://18.188.153.185:80${req.url}`);
 });
 
 router.all('/:id/reviews*', (req, res) => {
@@ -23,9 +23,9 @@ router.all('/:id/reviews*', (req, res) => {
 });
 
 router.all('/:id/restaurantInfo*', (req, res) => {
-  res.redirect(307, `http://localhost:3002${req.url}`);
+  res.redirect(307, `http://35.183.134.103:80${req.url}`);
 });
 
 server.listen(port, () => {
-  console.log('listening on 3030');
+  console.log(`listening on ${port}`);
 });
