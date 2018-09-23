@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 
-const port = process.env.PORT || 3030;
+const port = process.env.PORT;
 
 const server = express();
 const router = express.Router();
@@ -15,7 +15,7 @@ server.use(
 server.use('/api/businesses', router);
 
 server.get('/businesses/:id/images', (req, res) => {
-  res.redirect(`http://18.188.153.185:3000/images-service/${req.params.id}`);
+  res.redirect(`http://18.224.24.70:3000/images-service/${req.params.id}`);
 });
 
 server.get('/businesses/:id/reviews', (req, res) => {
@@ -29,7 +29,7 @@ server.get('/businesses/:id/restaurantInfo', (req, res) => {
 });
 
 router.all('/:id/images*', (req, res) => {
-  res.redirect(307, `http://18.188.153.185:3000${req.url}`);
+  res.redirect(307, `http://18.224.24.70:3000${req.url}`);
 });
 
 router.all('/:id/reviews*', (req, res) => {
