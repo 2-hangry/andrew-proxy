@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const compression = require('compression');
 const path = require('path');
 
 const port = process.env.PORT;
@@ -8,6 +9,7 @@ const server = express();
 const router = express.Router();
 
 server.use(cors());
+server.use(compression());
 server.use(
   '/businesses/:id',
   express.static(path.join(__dirname, '../public')),
