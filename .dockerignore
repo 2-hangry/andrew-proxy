@@ -1,2 +1,6 @@
 node_modules
 server
+README.md
+webpack.config.js
+.git
+.gitignore

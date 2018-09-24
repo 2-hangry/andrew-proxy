@@ -19,7 +19,7 @@ server.get('/businesses/:id/images', (req, res) => {
 });
 
 server.get('/businesses/:id/reviews', (req, res) => {
-  res.redirect(`http://52.55.139.226:80/reviews-service/${req.params.id}`);
+  res.redirect(`http://18.206.196.154:80/reviews-service/${req.params.id}`);
 });
 
 server.get('/businesses/:id/restaurantInfo', (req, res) => {
@@ -33,7 +33,7 @@ router.all('/:id/images*', (req, res) => {
 });
 
 router.all('/:id/reviews*', (req, res) => {
-  res.redirect(307, `http://52.55.139.226:80${req.url}`);
+  res.redirect(307, `http://18.206.196.154:80${req.url}`);
 });
 
 router.all('/:id/restaurantInfo*', (req, res) => {
